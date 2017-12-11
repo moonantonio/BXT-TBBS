@@ -143,7 +143,9 @@ namespace MoonAntonio
 				yield return null;
 			}
 
+			alexandria.acciones.RemoveAt(0);
 
+			alexandria.estadosBatalla = Alexandria.Procesado.ESPERAR;
 
 			isAccionInit = false;
 

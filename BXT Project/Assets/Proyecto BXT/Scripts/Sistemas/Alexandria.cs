@@ -22,11 +22,17 @@ namespace MoonAntonio
 		#region Variables Publicas
 		[Header("Estado")]
 		public Procesado estadosBatalla;
+		public GUIHero heroInput;
 		[Header("Acciones")]
 		public List<HandleTurno> acciones = new List<HandleTurno>();
 		[Header("Unidades de Combate")]
 		public List<GameObject> heroes = new List<GameObject>();
 		public List<GameObject> monstruos = new List<GameObject>();
+		public List<GameObject> heroesManager = new List<GameObject>();
+		#endregion
+
+		#region Variables Privadas
+		private HandleTurno eleccionHeroe;
 		#endregion
 
 		#region Enums
@@ -35,6 +41,15 @@ namespace MoonAntonio
 			ESPERAR,
 			ELEGIR,
 			ACCION
+		}
+
+		public enum GUIHero
+		{
+			ACTIVADA,
+			ESPERANDO,
+			UNI1,
+			UNI2,
+			TERMINADA
 		}
 		#endregion
 
