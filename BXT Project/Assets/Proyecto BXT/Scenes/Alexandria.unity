@@ -2121,9 +2121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estadosBatalla: 0
-  acciones:
-  - Atacante: 
-    goAtacante: {fileID: 0}
-    target: {fileID: 0}
+  acciones: []
   heroes: []
   monstruos: []

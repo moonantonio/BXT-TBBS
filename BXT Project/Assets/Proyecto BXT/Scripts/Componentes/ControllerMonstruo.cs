@@ -77,6 +77,8 @@ namespace MoonAntonio
 					break;
 
 				case EstadoTurno.SELECCIONANDO:
+					SeleccionarAccion();
+					estadoActual = EstadoTurno.ESPERANDO;
 					break;
 
 				case EstadoTurno.ESPERANDO:
@@ -102,7 +104,7 @@ namespace MoonAntonio
 			}
 		}
 
-		private void SeleccionandoAccion()
+		private void SeleccionarAccion()
 		{
 			HandleTurno accion = new HandleTurno();
 			accion.Atacante = unidad.nombre;
