@@ -24,6 +24,13 @@ namespace MoonAntonio
 		public Unidad unidad;
 		[Header("Estado")]
 		public EstadoTurno estadoActual;
+		[Header("Progress")]
+		public Image progress;
+		#endregion
+
+		#region Variables Privadas
+		private float cdActual = 0f;
+		private float cdMax = 5f;
 		#endregion
 
 		#region Enums
@@ -38,12 +45,20 @@ namespace MoonAntonio
 		}
 		#endregion
 
+		#region Inicializadores
+		private void Start()
+		{
+			estadoActual = EstadoTurno.PROCESANDO;
+		}
+		#endregion
+
 		#region Actualizadores
 		private void Update()
 		{
 			switch (estadoActual)
 			{
 				case EstadoTurno.PROCESANDO:
+					ActualizarProgressBar();
 					break;
 
 				case EstadoTurno.AGREGANDO:
@@ -67,7 +82,13 @@ namespace MoonAntonio
 		#region Metodos
 		private void ActualizarProgressBar()
 		{
-
+			cdActual = cdActual + Time.deltaTime;
+			float cdProcesado = cdActual / cdMax;
+			progress.transform.localScale = new Vector3(Mathf.Clamp(cdProcesado,0,1),progress.transform.localScale.y,progress.transform.localScale.z);
+			if (cdActual >= cdMax)
+			{
+				estadoActual = EstadoTurno.AGREGANDO;
+			}
 		}
 		#endregion
 	}
