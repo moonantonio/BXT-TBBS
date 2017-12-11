@@ -136,6 +136,14 @@ namespace MoonAntonio
 				yield return null;
 			}
 
+			Vector3 posicionInicio = posicionInicial;
+
+			while (MoverHaciaInicio(posicionInicio))
+			{
+				yield return null;
+			}
+
+
 
 			isAccionInit = false;
 
@@ -147,6 +155,11 @@ namespace MoonAntonio
 
 		#region Funcionalidad
 		private bool MoverHaciaObjetivo(Vector3 target)
+		{
+			return target != (transform.position = Vector3.MoveTowards(transform.position, target, velAnim * Time.deltaTime));
+		}
+
+		private bool MoverHaciaInicio(Vector3 target)
 		{
 			return target != (transform.position = Vector3.MoveTowards(transform.position, target, velAnim * Time.deltaTime));
 		}

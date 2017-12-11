@@ -72,6 +72,8 @@ namespace MoonAntonio
 					{
 
 					}
+
+					estadosBatalla = Procesado.ACCION;
 					break;
 
 				case Procesado.ACCION:
