@@ -9,6 +9,7 @@
 
 #region Librerias
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 #endregion
 
@@ -29,6 +30,9 @@ namespace MoonAntonio
 		public List<GameObject> heroes = new List<GameObject>();
 		public List<GameObject> monstruos = new List<GameObject>();
 		public List<GameObject> heroesManager = new List<GameObject>();
+		[Header("GUI")]
+		public GameObject btnMonstruo;
+		public Transform spacio;
 		#endregion
 
 		#region Variables Privadas
@@ -59,6 +63,8 @@ namespace MoonAntonio
 			estadosBatalla = Procesado.ESPERAR;
 			monstruos.AddRange(GameObject.FindGameObjectsWithTag("Monstruo"));
 			heroes.AddRange(GameObject.FindGameObjectsWithTag("Heroe"));
+
+			BtnsEnemigos();
 		}
 		#endregion
 
@@ -97,10 +103,26 @@ namespace MoonAntonio
 		}
 		#endregion
 
-		#region Metodos Publicos
+		#region Metodos
 		public void ColeccionAcciones(HandleTurno value)
 		{
 			acciones.Add(value);
+		}
+
+		private void BtnsEnemigos()
+		{
+			foreach (GameObject monstruo in monstruos)
+			{
+				GameObject newBtn = Instantiate(btnMonstruo) as GameObject;
+				BtnSeleccion btn = newBtn.GetComponent<BtnSeleccion>();
+
+				ControllerMonstruo monstruoActual = monstruo.GetComponent<ControllerMonstruo>();
+
+				Text btnText = newBtn.transform.Find("Text").gameObject.GetComponent<Text>();
+				btnText.text = monstruoActual.unidad.nombre;
+
+				newBtn.transform.SetParent(spacio);
+			}
 		}
 		#endregion
 	}

@@ -31,6 +31,7 @@ namespace MoonAntonio
 		#region Variables Privadas
 		private float cdActual = 0f;
 		private float cdMax = 5f;
+		private Alexandria alexandria;
 		#endregion
 
 		#region Enums
@@ -48,6 +49,7 @@ namespace MoonAntonio
 		#region Inicializadores
 		private void Start()
 		{
+			alexandria = GameObject.Find("Alexandria").GetComponent<Alexandria>();
 			estadoActual = EstadoTurno.PROCESANDO;
 		}
 		#endregion
@@ -62,12 +64,11 @@ namespace MoonAntonio
 					break;
 
 				case EstadoTurno.AGREGANDO:
+					alexandria.heroesManager.Add(this.gameObject);
+					estadoActual = EstadoTurno.ESPERANDO;
 					break;
 
 				case EstadoTurno.ESPERANDO:
-					break;
-
-				case EstadoTurno.SELECCIONANDO:
 					break;
 
 				case EstadoTurno.ACCION:
