@@ -31,6 +31,7 @@ namespace MoonAntonio
 		private Alexandria alexandria;
 		private float cdActual = 0f;
 		private float cdMax = 5f;
+		private Vector3 posicionInicial;
 		#endregion
 
 		#region Enums
@@ -50,9 +51,8 @@ namespace MoonAntonio
 		public enum EstadoTurno
 		{
 			PROCESANDO,
-			AGREGANDO,
-			ESPERANDO,
 			SELECCIONANDO,
+			ESPERANDO,
 			ACCION,
 			MUERTO
 		}
@@ -63,6 +63,7 @@ namespace MoonAntonio
 		{
 			estadoActual = EstadoTurno.PROCESANDO;
 			alexandria = GameObject.Find("Alexandria").GetComponent<Alexandria>();
+			posicionInicial = this.transform.position;
 		}
 		#endregion
 
@@ -75,13 +76,10 @@ namespace MoonAntonio
 					ActualizarProgressBar();
 					break;
 
-				case EstadoTurno.AGREGANDO:
+				case EstadoTurno.SELECCIONANDO:
 					break;
 
 				case EstadoTurno.ESPERANDO:
-					break;
-
-				case EstadoTurno.SELECCIONANDO:
 					break;
 
 				case EstadoTurno.ACCION:
@@ -100,8 +98,17 @@ namespace MoonAntonio
 
 			if (cdActual >= cdMax)
 			{
-				estadoActual = EstadoTurno.AGREGANDO;
+				estadoActual = EstadoTurno.SELECCIONANDO;
 			}
+		}
+
+		private void SeleccionandoAccion()
+		{
+			HandleTurno accion = new HandleTurno();
+			accion.Atacante = unidad.nombre;
+			accion.goAtacante = this.gameObject;
+			accion.target = alexandria.heroes[Random.Range(0, alexandria.heroes.Count)];
+			alexandria.ColeccionAcciones(accion);
 		}
 		#endregion
 	}

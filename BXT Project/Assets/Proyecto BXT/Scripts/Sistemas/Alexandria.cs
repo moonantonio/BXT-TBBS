@@ -63,5 +63,12 @@ namespace MoonAntonio
 			}
 		}
 		#endregion
+
+		#region Metodos Publicos
+		public void ColeccionAcciones(HandleTurno value)
+		{
+			acciones.Add(value);
+		}
+		#endregion
 	}
 }
