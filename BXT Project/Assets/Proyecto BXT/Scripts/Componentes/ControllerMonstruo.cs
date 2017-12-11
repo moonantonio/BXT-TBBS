@@ -9,6 +9,7 @@
 
 #region Librerias
 using UnityEngine;
+using System.Collections;
 #endregion
 
 namespace MoonAntonio
@@ -25,13 +26,17 @@ namespace MoonAntonio
 		public TipoMonstruo tipo;
 		[Header("Estado")]
 		public EstadoTurno estadoActual;
+		[Header("Control")]
+		public GameObject objetivo;
 		#endregion
 
 		#region Variables Privadas
 		private Alexandria alexandria;
 		private float cdActual = 0f;
-		private float cdMax = 5f;
+		private float cdMax = 1f;
 		private Vector3 posicionInicial;
+		private bool isAccionInit = false;
+		private float velAnim = 5.0f;
 		#endregion
 
 		#region Enums
@@ -85,6 +90,7 @@ namespace MoonAntonio
 					break;
 
 				case EstadoTurno.ACCION:
+					StartCoroutine(RealizarAccion());
 					break;
 
 				case EstadoTurno.MUERTO:
@@ -108,9 +114,41 @@ namespace MoonAntonio
 		{
 			HandleTurno accion = new HandleTurno();
 			accion.Atacante = unidad.nombre;
+			accion.tipo = "Monstruo";
 			accion.goAtacante = this.gameObject;
 			accion.target = alexandria.heroes[Random.Range(0, alexandria.heroes.Count)];
 			alexandria.ColeccionAcciones(accion);
+		}
+
+		private IEnumerator RealizarAccion()
+		{
+			if (isAccionInit)
+			{
+				yield break;
+			}
+
+			isAccionInit = true;
+
+			Vector3 posicionObjetivo = new Vector3(objetivo.transform.position.x ,objetivo.transform.position.y,objetivo.transform.position.z + 1.5f);
+
+			while (MoverHaciaObjetivo(posicionObjetivo))
+			{
+				yield return null;
+			}
+
+
+			isAccionInit = false;
+
+			cdActual = 0f;
+			estadoActual = EstadoTurno.PROCESANDO;
+
+		}
+		#endregion
+
+		#region Funcionalidad
+		private bool MoverHaciaObjetivo(Vector3 target)
+		{
+			return target != (transform.position = Vector3.MoveTowards(transform.position, target, velAnim * Time.deltaTime));
 		}
 		#endregion
 	}

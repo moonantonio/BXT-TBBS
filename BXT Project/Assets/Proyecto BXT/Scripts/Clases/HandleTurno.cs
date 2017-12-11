@@ -18,6 +18,7 @@ namespace MoonAntonio
 	{
 		#region Variables
 		public string Atacante;
+		public string tipo;
 		public GameObject goAtacante;
 		public GameObject target;
 		#endregion

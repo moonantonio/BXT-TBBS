@@ -53,9 +53,25 @@ namespace MoonAntonio
 			switch (estadosBatalla)
 			{
 				case Procesado.ESPERAR:
+					if (acciones.Count > 0)
+					{
+						estadosBatalla = Procesado.ELEGIR;
+					}
 					break;
 
 				case Procesado.ELEGIR:
+					GameObject u = GameObject.Find(acciones[0].Atacante);
+					if (acciones[0].tipo == "Monstruo")
+					{
+						ControllerMonstruo controlM = u.GetComponent<ControllerMonstruo>();
+						controlM.objetivo = acciones[0].target;
+						controlM.estadoActual = ControllerMonstruo.EstadoTurno.ACCION;
+					}
+
+					if (acciones[0].tipo == "Heroe")
+					{
+
+					}
 					break;
 
 				case Procesado.ACCION:
