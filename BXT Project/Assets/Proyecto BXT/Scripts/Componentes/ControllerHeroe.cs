@@ -19,7 +19,7 @@ namespace MoonAntonio
 	/// </summary>
 	public class ControllerHeroe : MonoBehaviour
 	{
-		#region Variables
+		#region Variables Publicas
 		[Header("Info Unidad")]
 		public Unidad unidad;
 		[Header("Estado")]
