@@ -9,7 +9,6 @@
 
 #region Librerias
 using UnityEngine;
-using UnityEngine.UI;
 #endregion
 
 namespace MoonAntonio
