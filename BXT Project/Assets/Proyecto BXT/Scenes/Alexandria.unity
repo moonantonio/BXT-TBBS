@@ -248,12 +248,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1760753304237968, guid: 46db31270c69f1e4bbe27642e46250c6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46db31270c69f1e4bbe27642e46250c6, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &168066828 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4636341953899272, guid: 46db31270c69f1e4bbe27642e46250c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 168066827}
+--- !u!1 &168066829 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1760753304237968, guid: 46db31270c69f1e4bbe27642e46250c6,
     type: 2}
   m_PrefabInternal: {fileID: 168066827}
 --- !u!1001 &185924799
@@ -1111,12 +1120,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1760753304237968, guid: 46db31270c69f1e4bbe27642e46250c6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46db31270c69f1e4bbe27642e46250c6, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1236420584 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4636341953899272, guid: 46db31270c69f1e4bbe27642e46250c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1236420583}
+--- !u!1 &1236420585 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1760753304237968, guid: 46db31270c69f1e4bbe27642e46250c6,
     type: 2}
   m_PrefabInternal: {fileID: 1236420583}
 --- !u!1 &1351892609
@@ -1396,6 +1414,7 @@ MonoBehaviour:
       inteligencia: 2
   estadoActual: 0
   progress: {fileID: 185924801}
+  selector: {fileID: 168066829}
 --- !u!1 &1613379287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,6 +1868,7 @@ MonoBehaviour:
       inteligencia: 2
   estadoActual: 0
   progress: {fileID: 319502155}
+  selector: {fileID: 1236420585}
 --- !u!4 &2041142157
 Transform:
   m_ObjectHideFlags: 0

@@ -26,6 +26,8 @@ namespace MoonAntonio
 		public EstadoTurno estadoActual;
 		[Header("Progress")]
 		public Image progress;
+
+		public GameObject selector;
 		#endregion
 
 		#region Variables Privadas
@@ -49,6 +51,8 @@ namespace MoonAntonio
 		#region Inicializadores
 		private void Start()
 		{
+			cdActual = Random.Range(0, 2.5f);
+			selector.SetActive(false);
 			alexandria = GameObject.Find("Alexandria").GetComponent<Alexandria>();
 			estadoActual = EstadoTurno.PROCESANDO;
 		}

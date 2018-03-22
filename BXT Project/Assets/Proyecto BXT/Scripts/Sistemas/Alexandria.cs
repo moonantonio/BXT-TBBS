@@ -112,7 +112,9 @@ namespace MoonAntonio
 				case (GUIHero.ACTIVADA):
 					if (heroesManager.Count > 0)
 					{
-
+						heroesManager[0].transform.Find("Selector").gameObject.SetActive(true);
+						panelAtaque.SetActive(true);
+						heroInput = GUIHero.ESPERANDO;
 					}
 					break;
 
