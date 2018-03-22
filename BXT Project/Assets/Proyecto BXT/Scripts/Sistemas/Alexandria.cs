@@ -113,6 +113,8 @@ namespace MoonAntonio
 					if (heroesManager.Count > 0)
 					{
 						heroesManager[0].transform.Find("Selector").gameObject.SetActive(true);
+						eleccionHeroe = new HandleTurno();
+
 						panelAtaque.SetActive(true);
 						heroInput = GUIHero.ESPERANDO;
 					}
@@ -149,6 +151,16 @@ namespace MoonAntonio
 
 				newBtn.transform.SetParent(spacio, false);
 			}
+		}
+
+		public void PrimeraEleccion()
+		{
+			eleccionHeroe.Atacante = heroesManager[0].name;
+			eleccionHeroe.goAtacante = heroesManager[0];
+			eleccionHeroe.tipo = "Heroe";
+
+			panelAtaque.SetActive(false);
+			panelSeleccionEnemigos.SetActive(true);
 		}
 		#endregion
 	}
