@@ -25,7 +25,7 @@ namespace MoonAntonio
 		#region Metodos
 		public void SeleccionarEnemigo()
 		{
-			Alexandria a = GameObject.Find("Alexandria").GetComponent<Alexandria>();
+			GameObject.Find("Alexandria").GetComponent<Alexandria>().SegundaEleccion(prefab);
 		}
 		#endregion
 	}

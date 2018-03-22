@@ -97,7 +97,7 @@ namespace MoonAntonio
 
 					if (acciones[0].tipo == "Heroe")
 					{
-
+						Debug.Log("Un Heroe tiene una accion.");
 					}
 
 					estadosBatalla = Procesado.ACCION;
@@ -124,6 +124,7 @@ namespace MoonAntonio
 					break;
 
 				case GUIHero.TERMINADA:
+					EleccionTerminada();
 					break;
 			}
 		}
@@ -161,6 +162,21 @@ namespace MoonAntonio
 
 			panelAtaque.SetActive(false);
 			panelSeleccionEnemigos.SetActive(true);
+		}
+
+		public void SegundaEleccion(GameObject enemigo)
+		{
+			eleccionHeroe.target = enemigo;
+			heroInput = GUIHero.TERMINADA;
+		}
+
+		private void EleccionTerminada()
+		{
+			acciones.Add(eleccionHeroe);
+			panelSeleccionEnemigos.SetActive(false);
+			heroesManager[0].transform.Find("Selector").gameObject.SetActive(false);
+			heroesManager.RemoveAt(0);
+			heroInput = GUIHero.ACTIVADA;
 		}
 		#endregion
 	}
