@@ -8,3 +8,5 @@
 
 # BXT-TBBS
 Sistema de batalla por turnos en Unity3D.
+
+- ~~8h~~/9n
