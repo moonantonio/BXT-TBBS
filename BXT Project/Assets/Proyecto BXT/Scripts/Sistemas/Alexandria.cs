@@ -67,6 +67,9 @@ namespace MoonAntonio
 			heroes.AddRange(GameObject.FindGameObjectsWithTag("Heroe"));
 			heroInput = GUIHero.ACTIVADA;
 
+			panelAtaque.SetActive(false);
+			panelSeleccionEnemigos.SetActive(false);
+
 			BtnsEnemigos();
 		}
 		#endregion
@@ -107,7 +110,10 @@ namespace MoonAntonio
 			switch (heroInput)
 			{
 				case (GUIHero.ACTIVADA):
+					if (heroesManager.Count > 0)
+					{
 
+					}
 					break;
 
 				case GUIHero.ESPERANDO:
