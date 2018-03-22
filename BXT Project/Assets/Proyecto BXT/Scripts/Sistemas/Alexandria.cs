@@ -33,6 +33,8 @@ namespace MoonAntonio
 		[Header("GUI")]
 		public GameObject btnMonstruo;
 		public Transform spacio;
+		public GameObject panelAtaque;
+		public GameObject panelSeleccionEnemigos;
 		#endregion
 
 		#region Variables Privadas
@@ -63,6 +65,7 @@ namespace MoonAntonio
 			estadosBatalla = Procesado.ESPERAR;
 			monstruos.AddRange(GameObject.FindGameObjectsWithTag("Monstruo"));
 			heroes.AddRange(GameObject.FindGameObjectsWithTag("Heroe"));
+			heroInput = GUIHero.ACTIVADA;
 
 			BtnsEnemigos();
 		}
@@ -100,6 +103,19 @@ namespace MoonAntonio
 				case Procesado.ACCION:
 					break;
 			}
+
+			switch (heroInput)
+			{
+				case (GUIHero.ACTIVADA):
+
+					break;
+
+				case GUIHero.ESPERANDO:
+					break;
+
+				case GUIHero.TERMINADA:
+					break;
+			}
 		}
 		#endregion
 
@@ -121,7 +137,9 @@ namespace MoonAntonio
 				Text btnText = newBtn.transform.Find("Text").gameObject.GetComponent<Text>();
 				btnText.text = monstruoActual.unidad.nombre;
 
-				newBtn.transform.SetParent(spacio);
+				btn.prefab = monstruo;
+
+				newBtn.transform.SetParent(spacio, false);
 			}
 		}
 		#endregion
