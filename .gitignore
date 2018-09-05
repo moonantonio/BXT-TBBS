@@ -54,8 +54,8 @@ $RECYCLE.BIN/
 Assets/_Content/GUI
  
 # COPYRIGHTED / ASSET STORE
-{Carpeta proyecto}/Assets/ThirdParty/*
-{Carpeta proyecto}/Assets/ThirdParty.meta
+Crystal Project/Assets/Extensiones/*
+Crystal Project/Assets/Extensiones.meta
  
 # GITEYE
 *.project

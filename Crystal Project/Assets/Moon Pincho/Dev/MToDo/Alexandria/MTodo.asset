@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a7ab50669226a4aa3bbc778be95c39, type: 3}
+  m_Name: MTodo
+  m_EditorClassIdentifier: 
+  Tickets:
+  - Texto: " Podemos invocar la funcion \"suspendSession()\", mientras que el juego
+      esta en estado de pausa.\r"
+    Nota: 
+    Tag: NOTAS
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Extensiones\Dolby_Audio_Plugin\Samples\CsDSControl.cs
+    Linea: 231
+    PathAMostrar: Assets/Extensiones/Dolby_Audio_Plugin/Samples/CsDSControl.cs(231)
+  - Texto: " Podemos invocar la funcion \"restartSession()\", mientras que el juego
+      se enfoca (el valor de \"focus\" debe ser \"true\").\r"
+    Nota: 
+    Tag: NOTAS
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Extensiones\Dolby_Audio_Plugin\Samples\CsDSControl.cs
+    Linea: 241
+    PathAMostrar: Assets/Extensiones/Dolby_Audio_Plugin/Samples/CsDSControl.cs(241)
+  - Texto: " Podemos invocar la funcion \"release()\", mientras que el juego comienza
+      a salir.\r"
+    Nota: 
+    Tag: NOTAS
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Extensiones\Dolby_Audio_Plugin\Samples\CsDSControl.cs
+    Linea: 252
+    PathAMostrar: Assets/Extensiones/Dolby_Audio_Plugin/Samples/CsDSControl.cs(252)
+  - Texto: " Serializar para que no tire error\r"
+    Nota: 
+    Tag: FIX
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Moon
+      Pincho\Dev\MGrid\Editor\MGrid.cs
+    Linea: 486
+    PathAMostrar: Assets/Moon Pincho/Dev/MGrid/Editor/MGrid.cs(486)
+  - Texto: " Quitar la exception \r"
+    Nota: 
+    Tag: FIX
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Moon
+      Pincho\Dev\MToDo\Editor\MTodoEditor.cs
+    Linea: 1165
+    PathAMostrar: Assets/Moon Pincho/Dev/MToDo/Editor/MTodoEditor.cs(1165)
+  - Texto: " Para testeo\r"
+    Nota: 
+    Tag: FIX
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Comun\AliadoMEstados.cs
+    Linea: 49
+    PathAMostrar: Assets/Project Crystal/Scripts/Comun/AliadoMEstados.cs(49)
+  - Texto: " Estado idle\r"
+    Nota: 
+    Tag: TODO
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Comun\EnemigoMEstados.cs
+    Linea: 63
+    PathAMostrar: Assets/Project Crystal/Scripts/Comun/EnemigoMEstados.cs(63)
+  - Texto: " Crear el sistema de camaras de batalla\r"
+    Nota: 
+    Tag: TODO
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Editor\SCamarasEditor.cs
+    Linea: 161
+    PathAMostrar: Assets/Project Crystal/Scripts/Editor/SCamarasEditor.cs(161)
+  - Texto: " Buscar pivote y asignar automaticamente\r"
+    Nota: 
+    Tag: FIX
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Editor\SCamarasEditor.cs
+    Linea: 212
+    PathAMostrar: Assets/Project Crystal/Scripts/Editor/SCamarasEditor.cs(212)
+  - Texto: " Usar Create si da error\r"
+    Nota: 
+    Tag: NOTAS
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Editor\SJoyStickEditor.cs
+    Linea: 1052
+    PathAMostrar: Assets/Project Crystal/Scripts/Editor/SJoyStickEditor.cs(1052)
+  - Texto: " Usar Create si da error\r"
+    Nota: 
+    Tag: NOTAS
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Editor\SJoyStickEditor.cs
+    Linea: 1074
+    PathAMostrar: Assets/Project Crystal/Scripts/Editor/SJoyStickEditor.cs(1074)
+  - Texto: " Recoger el pivote de las camaras en la batalla\r"
+    Nota: 
+    Tag: TODO
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Sistemas\SCamaras.cs
+    Linea: 212
+    PathAMostrar: Assets/Project Crystal/Scripts/Sistemas/SCamaras.cs(212)
+  - Texto: ": Implementar los bocadillos aqui\r"
+    Nota: 
+    Tag: TODO
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Sistemas\SUI.cs
+    Linea: 37
+    PathAMostrar: Assets/Project Crystal/Scripts/Sistemas/SUI.cs(37)
+  - Texto: ": Implementar la interaccion con los objetos\r"
+    Nota: 
+    Tag: TODO
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Sistemas\SUI.cs
+    Linea: 45
+    PathAMostrar: Assets/Project Crystal/Scripts/Sistemas/SUI.cs(45)
+  - Texto: " Obtener enemigos para la batalla\r"
+    Nota: 
+    Tag: TODO
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Sistemas\Alexandria.cs
+    Linea: 139
+    PathAMostrar: Assets/Project Crystal/Scripts/Sistemas/Alexandria.cs(139)
+  - Texto: " Obtener aliados para la batalla\r"
+    Nota: 
+    Tag: TODO
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Sistemas\Alexandria.cs
+    Linea: 141
+    PathAMostrar: Assets/Project Crystal/Scripts/Sistemas/Alexandria.cs(141)
+  - Texto: " Iniciar batalla\r"
+    Nota: 
+    Tag: TODO
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Comun\UnidadEnemiga.cs
+    Linea: 308
+    PathAMostrar: Assets/Project Crystal/Scripts/Comun/UnidadEnemiga.cs(308)
+  - Texto: " Cambiar animacion a durmiendo\r"
+    Nota: 
+    Tag: FIX
+    Archivo: C:\Users\pinch\Desktop\Proyecto Crystal\Project-Crystal\Crystal Project\Assets\Project
+      Crystal\Scripts\Comun\UnidadEnemiga.cs
+    Linea: 158
+    PathAMostrar: Assets/Project Crystal/Scripts/Comun/UnidadEnemiga.cs(158)
+  - Texto: " Quitar la exception \r"
+    Nota: 
+    Tag: FIX
+    Archivo: G:\Moon\User\GitHub\BXT-TBBS\Crystal Project\Assets\Moon Pincho\Dev\MToDo\Editor\MTodoEditor.cs
+    Linea: 1164
+    PathAMostrar: Assets/Moon Pincho/Dev/MToDo/Editor/MTodoEditor.cs(1164)
+  ListaTags:
+  - TODO
+  - BUG
+  - FIX
+  - NOTAS
+  - BETA

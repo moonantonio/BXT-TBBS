@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b024657b59c40644a72d23a32518c1a, type: 3}
+  m_Name: MTodoTareas
+  m_EditorClassIdentifier: 
+  Tareas:
+  - Titulo: Investigacion
+    Descripcion: "Investigar el dise\xF1o del juego para crear el prototipo necesario."
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 1
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: DDJ
+    Descripcion: "Crear el documento de dise\xF1o para el juego.\n\nEdit: A\xF1adido
+      a Trello"
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 1
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: Herramientas
+    Descripcion: 'Crear las diferentes herramientas para el editor.
+
+
+      * MTodo
+
+      * NGUI
+
+      * Prototipado
+
+      * MGrid
+
+      * Documentacion'
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 1
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Joystick
+    Descripcion: Sistema del JoyStick
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 1
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Camaras
+    Descripcion: Sistema del Camaras
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 1
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Triggers
+    Descripcion: Sistema del Trigger
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 1
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Movimiento
+    Descripcion: Sistema del Movimiento
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 1
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Agne
+    Descripcion: Sistema de la IA del enemigo
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 1
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Freya
+    Descripcion: Sistema de combate por turnos
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Lore
+    Descripcion: Sistema de familias
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. UI
+    Descripcion: Sistema de Interfaz de usuario
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Dialogos
+    Descripcion: Sistema de dialogos
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: S. Mapi
+    Descripcion: Sistema de Mapa
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Titulo: Minijuegos
+    Descripcion: Minijuegos variados
+    Categoria: Categoria
+    Fecha: Fecha Inicio 12/1/2016 12:00:00 AM||0
+    Terminada: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  Categorias:
+  - Nombre: Normal
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Nombre: Importante
+    Color: {r: 1, g: 0, b: 0.8896551, a: 1}
+  - Nombre: Bugs
+    Color: {r: 0.986207, g: 1, b: 0, a: 1}
+  - Nombre: Fix
+    Color: {r: 0.07586217, g: 1, b: 0, a: 1}
